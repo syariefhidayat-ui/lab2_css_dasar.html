@@ -72,4 +72,18 @@ contohnya:
 < body >
   < p style="color: red;" > Ini paragraf < / p >
 < / body > Jika di style.css warna p hijau, di internal warna p biru, dan di inline warna p merah, Maka warna teks yang ditampilkan adalah merah karena inline CSS memiliki prioritas tertinggi <br>
-4. 
+4. Jika sebuah elemen memiliki ID dan Class, maka selector ID lebih kuat dibandingkan selector Class, sehingga properti dari ID yang akan ditampilkan di browser contohnya:
+   < p id = "paragraf-1 " class = "text-paragraf" >
+  Ini contoh paragraf
+< / p >
+< style >
+  #paragraf-1 {
+    color: red;
+    font-size: 20px;
+  }
+  .text-paragraf {
+    color: blue;
+    font-size: 16px;
+  }
+< / style >
+Warna teks akan merah dan ukuran huruf 20px, karena selector ID (#paragraf-1) lebih spesifik dan memiliki prioritas lebih tinggi dibandingkan Class (.text-paragraf), Jika elemen memiliki ID dan Class, CSS dengan ID Selector akan mengoverride Class
